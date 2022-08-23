@@ -6,10 +6,16 @@
  */
 
 (function main() {
-  'use strict'; // Demande un interprétation stricte du code
+    'use strict'; // Demande un interprétation stricte du code
 
-  let a = 'Bonjour';
+    const celcius = parseInt(prompt('Température en celsius : '));
+    if (typeof celcius !== 'number' ) {
+        alert('Vous n\'avez pas saisi de nombre');
+        return;
+    }
 
-  console.log(a);
+    const fahrenheit = (celcius * 9/5) + 32;
+
+    alert(celcius + '°C = ' + fahrenheit + '°F');
 }()); // Main IIFE
 
